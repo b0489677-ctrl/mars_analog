@@ -1,0 +1,176 @@
+CCSD3ZF0000100000001NJPL3IF0PDS200000001 = SFDU_LABEL                         
+                                                                              
+RECORD_TYPE                    = FIXED_LENGTH                                 
+RECORD_BYTES                   = 78                                           
+FILE_RECORDS                   = 1044                                         
+INTERCHANGE_FORMAT             = ASCII                                        
+CARRIAGE_CONTROL               = LIST                                         
+                                                                              
+^TABLE                         = "VL_OPAC.DAT"                                
+                                                                              
+DATA_SET_ID                    = "VL1/VL2-M-LCS-5-ATMOS-OPTICAL-DEPTH-V1.0"   
+                                                                              
+DESCRIPTION                    =                                              
+     "This file was produced by the PDS Atmospheres node using PANDA from     
+      dataset VL1/VL2-M-LCS-5-ATMOS-OPTICAL-DEPTH-V1.0 for user LEE on        
+      13-Feb-1995 22:06:22.00 using the following SQL query against the       
+      Atmospheres database: SELECT DISTINCT * FROM MARS_VL_OPAC WHERE         
+      (SC_ID = 'VL1' OR   SC_ID = 'VL2') ORDER BY  SC_ID,  MARTIAN_DAY,       
+      LOCAL_HOUR,  LOCAL_MINUTE"                                              
+                                                                              
+/* Table Description */                                                       
+                                                                              
+OBJECT                         = TABLE                                        
+    NAME                       = PANDA_QUERY_RESULT                           
+    INTERCHANGE_FORMAT         = ASCII                                        
+    COLUMNS                    = 15                                           
+    ROWS                       = 1044                                         
+    ROW_BYTES                  = 79                                           
+    OBJECT                      = COLUMN                                      
+        NAME                    = "SC_ID"                                     
+        DATA_TYPE               = CHARACTER                                   
+        BYTES                   = 4                                           
+        START_BYTE              = 1                                           
+        FORMAT                  = "A4"                                        
+        DESCRIPTION             =                                             
+       "Spacecraft id"                                                        
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "CAMERA_ID"                                 
+        DATA_TYPE               = ASCII_INTEGER                               
+        BYTES                   = 2                                           
+        START_BYTE              = 5                                           
+        FORMAT                  = "I2"                                        
+        DESCRIPTION             =                                             
+       "Viking Lander camera id"                                              
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "VIKING_YEAR"                               
+        DATA_TYPE               = ASCII_INTEGER                               
+        BYTES                   = 2                                           
+        START_BYTE              = 7                                           
+        FORMAT                  = "I2"                                        
+        DESCRIPTION             =                                             
+       "Viking mission year"                                                  
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "MARTIAN_DAY"                               
+        DATA_TYPE               = ASCII_INTEGER                               
+        BYTES                   = 4                                           
+        START_BYTE              = 9                                           
+        FORMAT                  = "I4"                                        
+        DESCRIPTION             =                                             
+       "The martian solar day (sol), starting at day 0 when each Lander       
+        touched down.  A sol is 24 hours 39 minutes 35.25 seconds in Earth    
+        time."                                                                
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "LOCAL_HOUR"                                
+        DATA_TYPE               = ASCII_INTEGER                               
+        BYTES                   = 3                                           
+        START_BYTE              = 13                                          
+        FORMAT                  = "I3"                                        
+        DESCRIPTION             =                                             
+       "Local hour (in Earth hours), beginning at midnight (hour 0)."         
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "LOCAL_MINUTE"                              
+        DATA_TYPE               = ASCII_INTEGER                               
+        BYTES                   = 3                                           
+        START_BYTE              = 16                                          
+        FORMAT                  = "I3"                                        
+        DESCRIPTION             =                                             
+       "Local minute (in earth minutes)."                                     
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "OPACITY"                                   
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 6                                           
+        START_BYTE              = 19                                          
+        FORMAT                  = "F6.3"                                      
+        DESCRIPTION             =                                             
+       "Atmospheric optical depth"                                            
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "OPACITY_FLAG"                              
+        DATA_TYPE               = ASCII_INTEGER                               
+        BYTES                   = 2                                           
+        START_BYTE              = 25                                          
+        FORMAT                  = "I2"                                        
+        DESCRIPTION             =                                             
+       "Opacity limitation flag"                                              
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "EARTH_DAY"                                 
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 9                                           
+        START_BYTE              = 27                                          
+        FORMAT                  = "F9.3"                                      
+        DESCRIPTION             =                                             
+       "The fractional 1976 day number (Universal Time); for example, 1.5     
+        represents noon, January 1, 1976 (UT)."                               
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "SOL_LON"                                   
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 8                                           
+        START_BYTE              = 36                                          
+        FORMAT                  = "F8.3"                                      
+        DESCRIPTION             =                                             
+       "Areocentric longitude of the Sun."                                    
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "ERR_DIGITIZE"                              
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 7                                           
+        START_BYTE              = 44                                          
+        FORMAT                  = "F7.3"                                      
+        DESCRIPTION             =                                             
+       "The uncertainty in optical depth due to digitization error in the     
+        brightness signal. -1 indicates no value."                            
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "ERR_DEVIATE"                               
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 7                                           
+        START_BYTE              = 51                                          
+        FORMAT                  = "F7.3"                                      
+        DESCRIPTION             =                                             
+       "The uncertainty in optical depth due to the deviation in the          
+        multiple measurements averaged to determine the observed solar        
+        intensity at the surface."                                            
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "ERR_VIGNET"                                
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 7                                           
+        START_BYTE              = 58                                          
+        FORMAT                  = "F7.3"                                      
+        DESCRIPTION             =                                             
+       "The uncertainty in optical depth due to brightness loss in the        
+        Lander cameras resulting from vignetting. (-1 indicates no value.)"   
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "ERR_INTEN_0"                               
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 7                                           
+        START_BYTE              = 65                                          
+        FORMAT                  = "F7.3"                                      
+        DESCRIPTION             =                                             
+       "The uncertainty in optical depth due to uncertainty in the            
+        determination of the observed solar intensity at the surface."        
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "ERR_TOTAL"                                 
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 7                                           
+        START_BYTE              = 72                                          
+        FORMAT                  = "F7.3"                                      
+        DESCRIPTION             =                                             
+       "The total uncertainty in optical depth, taken as the root mean        
+        square of ERR_DEVIATE, ERR_VIGNET, and ERR_INTEN_O.  ERR_DIGITIZE     
+        is excluded as it is implicit in ERR_DEVIATE. (-1 indicates no        
+        value.)"                                                              
+    END_OBJECT                                                                
+END_OBJECT                                                                    
+END                                                                           

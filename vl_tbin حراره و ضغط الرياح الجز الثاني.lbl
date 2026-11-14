@@ -1,0 +1,292 @@
+CCSD3ZF0000100000001NJPL3IF0PDS200000001 = SFDU_LABEL                         
+                                                                              
+RECORD_TYPE                    = FIXED_LENGTH                                 
+RECORD_BYTES                   = 147                                          
+FILE_RECORDS                   = 25750                                        
+INTERCHANGE_FORMAT             = ASCII                                        
+CARRIAGE_CONTROL               = LIST                                         
+                                                                              
+^TABLE                         = "VL_TBIN.DAT"                                
+                                                                              
+DATA_SET_ID                    = "VL1/VL2-M-MET-4-BINNED-P-T-V-V1.0       "   
+                                                                              
+DESCRIPTION                    =                                              
+     "This file was produced by the PDS Atmospheres node using PANDA from     
+      dataset VL1/VL2-M-MET-4-BINNED-P-T-V-V1.0 for user LEE on               
+      13-Feb-1995 22:48:24.00 using the following SQL query against the       
+      Atmospheres database: SELECT DISTINCT * FROM MARS_VL_TBIN WHERE         
+      (SC_ID = 'VL1' OR   SC_ID = 'VL2') ORDER BY  SC_ID,  MARTIAN_DAY,       
+      LOCAL_HR_BIN"                                                           
+                                                                              
+/* Table Description */                                                       
+                                                                              
+OBJECT                         = TABLE                                        
+    NAME                       = PANDA_QUERY_RESULT                           
+    INTERCHANGE_FORMAT         = ASCII                                        
+    COLUMNS                    = 27                                           
+    ROWS                       = 25750                                        
+    ROW_BYTES                  = 148                                          
+    OBJECT                      = COLUMN                                      
+        NAME                    = "SC_ID"                                     
+        DATA_TYPE               = CHARACTER                                   
+        BYTES                   = 4                                           
+        START_BYTE              = 1                                           
+        FORMAT                  = "A4"                                        
+        DESCRIPTION             =                                             
+       "Spacecraft id.  VL1 : Viking Lander 1.  VL2 : Viking Lander 2"        
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "VIKING_YEAR"                               
+        DATA_TYPE               = ASCII_INTEGER                               
+        BYTES                   = 2                                           
+        START_BYTE              = 5                                           
+        FORMAT                  = "I2"                                        
+        DESCRIPTION             =                                             
+       "Viking mission year"                                                  
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "SOL_LON"                                   
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 8                                           
+        START_BYTE              = 7                                           
+        FORMAT                  = "F8.3"                                      
+        DESCRIPTION             =                                             
+       "Areocentric longitude of the sun corresponding to the local time."    
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "MARTIAN_DAY"                               
+        DATA_TYPE               = ASCII_INTEGER                               
+        BYTES                   = 5                                           
+        START_BYTE              = 15                                          
+        FORMAT                  = "I5"                                        
+        DESCRIPTION             =                                             
+       "Martian solar day (sol), starting at Day 0 when each Lander touched   
+        down. VL1: 1 - 45.  VL2: 0 - 1050.  Each Martian day is 24 hr 39      
+        minutes 35.25 seconds in earth time."                                 
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "LOCAL_HR_BIN"                              
+        DATA_TYPE               = ASCII_INTEGER                               
+        BYTES                   = 3                                           
+        START_BYTE              = 20                                          
+        FORMAT                  = "I3"                                        
+        DESCRIPTION             =                                             
+       "Bin number"                                                           
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "WND_TEM_TOT"                               
+        DATA_TYPE               = ASCII_INTEGER                               
+        BYTES                   = 5                                           
+        START_BYTE              = 23                                          
+        FORMAT                  = "I5"                                        
+        DESCRIPTION             =                                             
+       "Number of wind measurements in bin."                                  
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "WND_TMP_NLI"                               
+        DATA_TYPE               = ASCII_INTEGER                               
+        BYTES                   = 5                                           
+        START_BYTE              = 28                                          
+        FORMAT                  = "I5"                                        
+        DESCRIPTION             =                                             
+       "Number of wind measurements in bin not suffering from Lander          
+        interference."                                                        
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "PRESS_TOT"                                 
+        DATA_TYPE               = ASCII_INTEGER                               
+        BYTES                   = 5                                           
+        START_BYTE              = 33                                          
+        FORMAT                  = "I5"                                        
+        DESCRIPTION             =                                             
+       "Number of recalibrated pressure points in bin."                       
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "ZON_WND_MEAN"                              
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 6                                           
+        START_BYTE              = 38                                          
+        FORMAT                  = "F6.1"                                      
+        DESCRIPTION             =                                             
+       "Mean zonal wind speed in bin (m/sec)."                                
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "ZON_WND_DEV"                               
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 6                                           
+        START_BYTE              = 44                                          
+        FORMAT                  = "F6.1"                                      
+        DESCRIPTION             =                                             
+       "Standard deviation of bin zonal wind speed"                           
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "MER_WND_MEAN"                              
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 6                                           
+        START_BYTE              = 50                                          
+        FORMAT                  = "F6.1"                                      
+        DESCRIPTION             =                                             
+       "Mean meridional wind speed in bin (m/sec)."                           
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "MER_WND_DEV"                               
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 6                                           
+        START_BYTE              = 56                                          
+        FORMAT                  = "F6.1"                                      
+        DESCRIPTION             =                                             
+       "Standard deviation of bin meridional wind speed."                     
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "WIND_FLG"                                  
+        DATA_TYPE               = CHARACTER                                   
+        BYTES                   = 3                                           
+        START_BYTE              = 62                                          
+        FORMAT                  = "A3"                                        
+        DESCRIPTION             =                                             
+       "Warning flags: M indicates missing data; n indicates no data; I       
+        indicates Lander interference only; S indicates splined data; $       
+        indicates splined due to Lander interference."                        
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "WND_SPD_MEAN"                              
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 6                                           
+        START_BYTE              = 65                                          
+        FORMAT                  = "F6.1"                                      
+        DESCRIPTION             =                                             
+       "Mean combined wind speed in bin (m/sec)."                             
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "WND_SPD_DEV"                               
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 6                                           
+        START_BYTE              = 71                                          
+        FORMAT                  = "F6.1"                                      
+        DESCRIPTION             =                                             
+       "Standard deviation of bin combined wind speed."                       
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "PRESS_MEAN"                                
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 6                                           
+        START_BYTE              = 77                                          
+        FORMAT                  = "F6.2"                                      
+        DESCRIPTION             =                                             
+       "Mean recalibrated pressure in bin (millibars)."                       
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "PRESS_FLAG"                                
+        DATA_TYPE               = CHARACTER                                   
+        BYTES                   = 3                                           
+        START_BYTE              = 83                                          
+        FORMAT                  = "A3"                                        
+        DESCRIPTION             =                                             
+       "Warning flags: M indicates missing data; n indicates no data; I       
+        indicates Lander interference only; S indicates splined data; $       
+        indicates splined due to Lander interference."                        
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "TAMB_NLI_MN"                               
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 7                                           
+        START_BYTE              = 86                                          
+        FORMAT                  = "F7.2"                                      
+        DESCRIPTION             =                                             
+       "Mean ambient temperature in bin (Kelvin). (No Lander interference     
+        experienced.)"                                                        
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "TAMB_NLI_DEV"                              
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 7                                           
+        START_BYTE              = 93                                          
+        FORMAT                  = "F7.2"                                      
+        DESCRIPTION             =                                             
+       "Standard deviation of bin ambient temperature. (No Lander             
+        interference experienced)."                                           
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "T_NLI_FLAG"                                
+        DATA_TYPE               = CHARACTER                                   
+        BYTES                   = 3                                           
+        START_BYTE              = 100                                         
+        FORMAT                  = "A3"                                        
+        DESCRIPTION             =                                             
+       "Warning flags. M indicates missing data; n indicates no data; I       
+        indicates Lander interference only; S indicates splined data; $       
+        indicates splined due to Lander interference."                        
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "TREF_NLI_MN"                               
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 7                                           
+        START_BYTE              = 103                                         
+        FORMAT                  = "F7.2"                                      
+        DESCRIPTION             =                                             
+       "Mean reference temperature (Kelvin) in bin. (No Lander interference   
+        experienced.)"                                                        
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "TREF_NLI_DEV"                              
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 7                                           
+        START_BYTE              = 110                                         
+        FORMAT                  = "F7.2"                                      
+        DESCRIPTION             =                                             
+       "Standard deviation of bin reference temperature. (No Lander           
+        interference experienced)."                                           
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "TAMB_INT_MN"                               
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 7                                           
+        START_BYTE              = 117                                         
+        FORMAT                  = "F7.2"                                      
+        DESCRIPTION             =                                             
+       "Mean Lander interference effect on bin ambient temperature            
+        (Kelvin)."                                                            
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "TAMB_INT_DEV"                              
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 7                                           
+        START_BYTE              = 124                                         
+        FORMAT                  = "F7.2"                                      
+        DESCRIPTION             =                                             
+       "Standard deviation of Lander interference effect on bin ambient       
+        temperature."                                                         
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "T_INT_FLAG"                                
+        DATA_TYPE               = CHARACTER                                   
+        BYTES                   = 3                                           
+        START_BYTE              = 131                                         
+        FORMAT                  = "A3"                                        
+        DESCRIPTION             =                                             
+       "Warning flags. M indicates missing data; n indicates no data; I       
+        indicates Lander interference only; S indicates splined data; $       
+        indicates splined due to Lander interference."                        
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "TREF_INT_MN"                               
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 7                                           
+        START_BYTE              = 134                                         
+        FORMAT                  = "F7.2"                                      
+        DESCRIPTION             =                                             
+       "Mean Lander interference effect on bin reference temperature          
+        (Kelvin)."                                                            
+    END_OBJECT                                                                
+    OBJECT                      = COLUMN                                      
+        NAME                    = "TREF_INT_DEV"                              
+        DATA_TYPE               = ASCII_REAL                                  
+        BYTES                   = 7                                           
+        START_BYTE              = 141                                         
+        FORMAT                  = "F7.2"                                      
+        DESCRIPTION             =                                             
+       "Standard deviation of Lander interference effect on bin reference     
+        temperature."                                                         
+    END_OBJECT                                                                
+END_OBJECT                                                                    
+END                                                                           

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c933ddc949a8afcc5b6d6f4d2aff51d5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c933ddc949a8afcc5b6d6f4d2aff51d5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c933ddc949a8afcc5b6d6f4d2aff51d5 = L.map(
+                "map_c933ddc949a8afcc5b6d6f4d2aff51d5",
+                {
+                    center: [20.0, 30.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_911719b8c817b4819c0d80cf6ccfb8f0 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_911719b8c817b4819c0d80cf6ccfb8f0.addTo(map_c933ddc949a8afcc5b6d6f4d2aff51d5);
+        
+    
+            var marker_9c2f5d047c1747aa13a80d80935d49ef = L.marker(
+                [23.3, 26.1],
+                {
+}
+            ).addTo(map_c933ddc949a8afcc5b6d6f4d2aff51d5);
+        
+    
+            var icon_0dc7949cc59ff9127b20e34d1d5a068d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_58296deaa9064b20793216b1580e924e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_936bc4ab46b91234e151baed61b9fbb5 = $(`<div id="html_936bc4ab46b91234e151baed61b9fbb5" style="width: 100.0%; height: 100.0%;"><b>Gilf Kebir (Egypt)</b><br>Total: 46<br>Temp 1 | Dust 0<br>Vegetation 77 | Soil moisture 92 | Wind 62<br>Pressure: 105x Mars</div>`)[0];
+                popup_58296deaa9064b20793216b1580e924e.setContent(html_936bc4ab46b91234e151baed61b9fbb5);
+            
+        
+
+        marker_9c2f5d047c1747aa13a80d80935d49ef.bindPopup(popup_58296deaa9064b20793216b1580e924e)
+        ;
+
+        
+    
+    
+                marker_9c2f5d047c1747aa13a80d80935d49ef.setIcon(icon_0dc7949cc59ff9127b20e34d1d5a068d);
+            
+    
+            var marker_e2aac02830aa587938501759a54348de = L.marker(
+                [28.3, -16.6],
+                {
+}
+            ).addTo(map_c933ddc949a8afcc5b6d6f4d2aff51d5);
+        
+    
+            var icon_6add4395dc4796ea6c38b193ef0582ff = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f28e93935dc17ed091d1a35c15d049aa = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c4f33f46163adb45ea90c3171a83b869 = $(`<div id="html_c4f33f46163adb45ea90c3171a83b869" style="width: 100.0%; height: 100.0%;"><b>Teide (Tenerife, Spain)</b><br>Total: 46<br>Temp 0 | Dust 0<br>Vegetation 100 | Soil moisture 42 | Wind 89<br>Pressure: 115x Mars</div>`)[0];
+                popup_f28e93935dc17ed091d1a35c15d049aa.setContent(html_c4f33f46163adb45ea90c3171a83b869);
+            
+        
+
+        marker_e2aac02830aa587938501759a54348de.bindPopup(popup_f28e93935dc17ed091d1a35c15d049aa)
+        ;
+
+        
+    
+    
+                marker_e2aac02830aa587938501759a54348de.setIcon(icon_6add4395dc4796ea6c38b193ef0582ff);
+            
+    
+            var marker_59efa2b51dbd223647a21cc03c72b067 = L.marker(
+                [-24.5, -67.5],
+                {
+}
+            ).addTo(map_c933ddc949a8afcc5b6d6f4d2aff51d5);
+        
+    
+            var icon_00b7afc8d4d0dd26d2608d45b3b5805b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2c1362195bd9630216c7b7a33e57c94e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_31dea5447a3e1b9968b1383960ec673d = $(`<div id="html_31dea5447a3e1b9968b1383960ec673d" style="width: 100.0%; height: 100.0%;"><b>Atacama-Puna (Chile/Argentina)</b><br>Total: 43<br>Temp 14 | Dust 0<br>Vegetation 76 | Soil moisture 66 | Wind 60<br>Pressure: 74x Mars</div>`)[0];
+                popup_2c1362195bd9630216c7b7a33e57c94e.setContent(html_31dea5447a3e1b9968b1383960ec673d);
+            
+        
+
+        marker_59efa2b51dbd223647a21cc03c72b067.bindPopup(popup_2c1362195bd9630216c7b7a33e57c94e)
+        ;
+
+        
+    
+    
+                marker_59efa2b51dbd223647a21cc03c72b067.setIcon(icon_00b7afc8d4d0dd26d2608d45b3b5805b);
+            
+    
+            var marker_992c8db5ed5e37a619ebc30140677e73 = L.marker(
+                [-19.5, -67.8],
+                {
+}
+            ).addTo(map_c933ddc949a8afcc5b6d6f4d2aff51d5);
+        
+    
+            var icon_e86aeb2e3335704f384532d76252c565 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ee164b3e030fb02bcee638dbf9b50953 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a0a3992af208d6f20972f4f1c35e209c = $(`<div id="html_a0a3992af208d6f20972f4f1c35e209c" style="width: 100.0%; height: 100.0%;"><b>Altiplano (Bolivia)</b><br>Total: 37<br>Temp 12 | Dust 0<br>Vegetation 68 | Soil moisture 69 | Wind 33<br>Pressure: 74x Mars</div>`)[0];
+                popup_ee164b3e030fb02bcee638dbf9b50953.setContent(html_a0a3992af208d6f20972f4f1c35e209c);
+            
+        
+
+        marker_992c8db5ed5e37a619ebc30140677e73.bindPopup(popup_ee164b3e030fb02bcee638dbf9b50953)
+        ;
+
+        
+    
+    
+                marker_992c8db5ed5e37a619ebc30140677e73.setIcon(icon_e86aeb2e3335704f384532d76252c565);
+            
+    
+            var marker_b4e609d349bf8d4ab5734bfbb4804b03 = L.marker(
+                [65.0, -17.0],
+                {
+}
+            ).addTo(map_c933ddc949a8afcc5b6d6f4d2aff51d5);
+        
+    
+            var icon_aac82cbd01026f210922408112f5e4f3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_84dba0732e0089da62021332d9acbb58 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_52010e14be255e322177ee3a042c2986 = $(`<div id="html_52010e14be255e322177ee3a042c2986" style="width: 100.0%; height: 100.0%;"><b>Askja-Odadahraun (Iceland)</b><br>Total: 33<br>Temp 24 | Dust 0<br>Vegetation 77 | Soil moisture 14 | Wind 51<br>Pressure: 104x Mars</div>`)[0];
+                popup_84dba0732e0089da62021332d9acbb58.setContent(html_52010e14be255e322177ee3a042c2986);
+            
+        
+
+        marker_b4e609d349bf8d4ab5734bfbb4804b03.bindPopup(popup_84dba0732e0089da62021332d9acbb58)
+        ;
+
+        
+    
+    
+                marker_b4e609d349bf8d4ab5734bfbb4804b03.setIcon(icon_aac82cbd01026f210922408112f5e4f3);
+            
+    
+            var marker_b4ebbc9de7537f8b5beb0cdf38270acb = L.marker(
+                [-77.5, 162.0],
+                {
+}
+            ).addTo(map_c933ddc949a8afcc5b6d6f4d2aff51d5);
+        
+    
+            var icon_d19adf5660dbfc1f829c8b7b7a02cf66 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_03fff4e5f605499312c94bace8c6ade5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_645b00935ba6f575f58f7b19aabb6f83 = $(`<div id="html_645b00935ba6f575f58f7b19aabb6f83" style="width: 100.0%; height: 100.0%;"><b>McMurdo Dry Valleys (Antarctica)</b><br>Total: 32<br>Temp 47 | Dust 0<br>Vegetation nan | Soil moisture 0 | Wind 83<br>Pressure: 97x Mars</div>`)[0];
+                popup_03fff4e5f605499312c94bace8c6ade5.setContent(html_645b00935ba6f575f58f7b19aabb6f83);
+            
+        
+
+        marker_b4ebbc9de7537f8b5beb0cdf38270acb.bindPopup(popup_03fff4e5f605499312c94bace8c6ade5)
+        ;
+
+        
+    
+    
+                marker_b4ebbc9de7537f8b5beb0cdf38270acb.setIcon(icon_d19adf5660dbfc1f829c8b7b7a02cf66);
+            
+    
+            var marker_751671643289986d6258fa33418db14b = L.marker(
+                [69.4, -133.0],
+                {
+}
+            ).addTo(map_c933ddc949a8afcc5b6d6f4d2aff51d5);
+        
+    
+            var icon_74c9c6565c623206087480788e4d2fec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_64d24aa14ef4b99abe2377fb32047f73 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b79aa5097c1026f2d617c5b6b3ba580e = $(`<div id="html_b79aa5097c1026f2d617c5b6b3ba580e" style="width: 100.0%; height: 100.0%;"><b>Tuktoyaktuk (Canadian Arctic)</b><br>Total: 25<br>Temp 29 | Dust 0<br>Vegetation 43 | Soil moisture 25 | Wind 28<br>Pressure: 116x Mars</div>`)[0];
+                popup_64d24aa14ef4b99abe2377fb32047f73.setContent(html_b79aa5097c1026f2d617c5b6b3ba580e);
+            
+        
+
+        marker_751671643289986d6258fa33418db14b.bindPopup(popup_64d24aa14ef4b99abe2377fb32047f73)
+        ;
+
+        
+    
+    
+                marker_751671643289986d6258fa33418db14b.setIcon(icon_74c9c6565c623206087480788e4d2fec);
+            
+    
+            var marker_cafca64b1b53dffd79cc2beb02de03eb = L.marker(
+                [35.0, -111.0],
+                {
+}
+            ).addTo(map_c933ddc949a8afcc5b6d6f4d2aff51d5);
+        
+    
+            var icon_9b66ba66c996fcf8aae375fe52ff2dfe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0a47645db94a3b7f539f68bc75ce49cf = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_00b724667b237b88218afe8f89246bdb = $(`<div id="html_00b724667b237b88218afe8f89246bdb" style="width: 100.0%; height: 100.0%;"><b>Meteor Crater (Arizona)</b><br>Total: 20<br>Temp 9 | Dust 0<br>Vegetation 0 | Soil moisture 59 | Wind 31<br>Pressure: 93x Mars</div>`)[0];
+                popup_0a47645db94a3b7f539f68bc75ce49cf.setContent(html_00b724667b237b88218afe8f89246bdb);
+            
+        
+
+        marker_cafca64b1b53dffd79cc2beb02de03eb.bindPopup(popup_0a47645db94a3b7f539f68bc75ce49cf)
+        ;
+
+        
+    
+    
+                marker_cafca64b1b53dffd79cc2beb02de03eb.setIcon(icon_9b66ba66c996fcf8aae375fe52ff2dfe);
+            
+</script>
+</html>
